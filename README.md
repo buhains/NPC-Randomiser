@@ -58,12 +58,9 @@ Or [modify the .txt](#modify-the-text-files) files to add, change or remove:
 3. Underneath, you should see a dictionary starting with `trait = {` e.g. `races = {`
 
 **Adding a new trait**
-
-a. To add a new type for this trait, copy one of the lines e.g. `"None":4`. 
-
-b. Press enter to add a new line underneath.
-
-c. Ensure there is a comma (`,`) at the end of the line.
+1. To add a new type for this trait, copy one of the lines e.g. `"None":4`. 
+2. Press enter to add a new line underneath.
+3. Ensure there is a comma (`,`) at the end of the line.
 
 **Modifying a trait**
 - Change type: Replace the value within the quotation marks (`"`) to the new type you want to add e.g. `"Warforged"`.
