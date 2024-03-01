@@ -40,7 +40,7 @@ As a Dungeon Master, I regularly have trouble thinking up character names and tr
 # Installation
 Ensure you have [Python 3](https://www.python.org/downloads/) installed on your computer.
 
-This program can be run via Python or any Command Prompt software.
+This program can be run via Python or any Terminal interfacing software.
 
 # Changing Values
 You can easily [modify the .py](#modify-the-python-file) to add, change or remove:
