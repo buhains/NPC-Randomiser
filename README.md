@@ -34,6 +34,9 @@ Race: Dwarf
 Name: Ulfgar
 Attitude: Stoic
 ```
+
+As a Dungeon Master, I regularly have trouble thinking up character names and traits on the fly, and it's *always* coming up. I hope this tool helps to prevent creating stereotypical/flat characters and makes running games a whole lot easier.
+
 # Installation
 Ensure you have [Python 3](https://www.python.org/downloads/) installed on your computer.
 
