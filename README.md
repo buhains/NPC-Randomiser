@@ -58,8 +58,11 @@ Or [modify the .txt](#modify-the-text-files) files to add, change or remove:
 3. Underneath, you should see a dictionary starting with `trait = {` e.g. `races = {`
 
 **Adding a new trait**
+
 a. To add a new type for this trait, copy one of the lines e.g. `"None":4`. 
+
 b. Press enter to add a new line underneath.
+
 c. Ensure there is a comma (`,`) at the end of the line.
 
 **Modifying a trait**
@@ -71,6 +74,7 @@ c. Ensure there is a comma (`,`) at the end of the line.
     - So on and so forth.
 
 **Removing a trait**
+
 Delete the entire line, including the comma. 
 
 ## Modify the Text files
