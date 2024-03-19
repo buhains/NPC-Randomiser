@@ -1,69 +1,62 @@
 import random
 import codecs
 
+# Traits:
+## Add more types of a trait by copying one line and replacing the values.
+## The numerical value = the likelihood of this trait appearing (in proportion to others listed). See readme.md for more details.
+
+genders = {  
+    "Female": 1,
+    "Male": 1,
+    "Genderfluid": 1,
+    "Agender": 1
+}
+
+classes = {
+    "None": 4,
+    "Fighter (Sword User)": 2,
+    "Barbarian": 1,
+    "Bard": 1,
+    "Cleric": 1,
+    "Druid": 1,
+    "Fighter (Archer)": 1,
+    "Monk": 1,
+    "Paladin": 1,
+    "Ranger": 1,
+    "Rogue": 1,
+    "Sorcerer": 1,
+    "Warlock": 1,
+    "Wizard": 1,
+    "Artificer": 1,
+    "Blood Hunter": 1
+}
+
+races = {
+    "Human": 3,
+    "Elf": 1,
+    "Dwarf": 1,
+    "Halfling": 1,
+    "Gnome": 1,
+    "Tiefling": 1,
+    "Half-elf": 1,
+    "Drow": 0.5,
+    "Half-orc": 0.5,
+    "Dragonborn": 0.5,
+    "Aasimar": 0.1,
+    "Changeling": 0.1,
+    "Yuan-ti": 0.1,
+    "Merfolk": 0.1,
+    "Genasi": 0.1
+}
+
 def main():
-    gender = genders()
-    race = races()
-    print("Gender:", gender)
-    print("Class:", classes())
-    print("Race:", race)
+    gender = random_weights(genders)
+    race = random_weights(races)
     print("Name:", names(gender,race))
+    print("Gender:", gender)
+    print("Class:", random_weights(classes))
+    print("Race:", race)
     print("Attitude:", attitudes())
-
-def genders():
-    genders = {  # Add more types of this trait by copying one line and replacing the values.
-        # The numerical value = the likelihood of this trait appearing (in proportion to others listed).
-        "Female": 1,
-        "Male": 1,
-        "Genderfluid": 1,
-        "Agender": 1
-    }
-
-    return random_trait(genders)
-
-def classes():
-    classes = {
-        "None": 4,
-        "Fighter (Sword User)": 2,
-        "Barbarian": 1,
-        "Bard": 1,
-        "Cleric": 1,
-        "Druid": 1,
-        "Fighter (Archer)": 1,
-        "Monk": 1,
-        "Paladin": 1,
-        "Ranger": 1,
-        "Rogue": 1,
-        "Sorcerer": 1,
-        "Warlock": 1,
-        "Wizard": 1,
-        "Artificer": 1,
-        "Blood Hunter": 1
-    }
-    
-    return random_trait(classes)
-
-def races():
-    
-    races = {
-        "Human": 3,
-        "Elf": 1,
-        "Dwarf": 1,
-        "Halfling": 1,
-        "Gnome": 1,
-        "Tiefling": 1,
-        "Half-elf": 1,
-        "Drow": 0.5,
-        "Half-orc": 0.5,
-        "Dragonborn": 0.5,
-        "Aasimar": 0.1,
-        "Changeling": 0.1,
-        "Yuan-ti": 0.1,
-        "Merfolk": 0.1,
-        "Genasi": 0.1
-    }
-
-    return random_trait(races)
 
 def names(gender,race):
     # Checks if character is non-binary to use All Genders list
@@ -96,7 +89,7 @@ def attitudes():
     attitude = random.choice(attitudes)
     return attitude
 
-def random_trait(property_to_weight: dict[str, float]) -> str:
+def random_weights(property_to_weight: dict[str, float]) -> str:
     properties = list(property_to_weight.keys())
     weights = list(property_to_weight.values())
     return random.choices(properties, weights)[0]
